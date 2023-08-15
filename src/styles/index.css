@@ -1,6 +1,10 @@
 /* 
     General Styles
 */
+body {
+  background-color: black;
+  color:white;
+}
 .my-carousel {
   display: flex;
   overflow-x: scroll;
