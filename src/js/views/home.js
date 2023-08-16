@@ -37,7 +37,7 @@ export const Home = () => {
                   >
                     Learn more!
                   </Link>
-                  <button className="btn btn-outline-danger"><i className="fa fa-heart text-danger" /></button>
+                  <button className="btn btn-outline-danger"><i className="fa fa-heart text-danger" onClick={()=>{actions.guardarFavoritos(item.properties.name)}}/></button>
                 </div>
               </div>
             );
@@ -71,7 +71,7 @@ export const Home = () => {
                   >
                     Learn more!
                   </Link>
-                  <button className="btn btn-outline-danger"><i className="fa fa-heart text-danger" /></button>
+                  <button className="btn btn-outline-danger"><i className="fa fa-heart text-danger" onClick={()=>{actions.guardarFavoritos(item.properties.name)}}/></button>
                 </div>
               </div>
             );

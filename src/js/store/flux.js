@@ -4,6 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       characters: [],
       planets: [],
       urlBase: "https://www.swapi.tech/api",
+      favorito: [],
     },
     actions: {
       getCharacters: () => {
@@ -34,6 +35,15 @@ const getState = ({ getStore, getActions, setStore }) => {
           setStore({ planets: [...store.planets, data.result] });
         }
       },
+      guardarFavoritos(nombre) { 
+        const store= getStore();
+        const favoritos= store.favorito ;
+        // store.favorito se guada dentro de favoritos 
+        const newfavoritos= [...favoritos,{name:nombre, id:favoritos.length } ]
+        setStore({favorito:newfavoritos})
+      }
+
+      
     },
   };
 };
