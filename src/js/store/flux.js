@@ -41,8 +41,13 @@ const getState = ({ getStore, getActions, setStore }) => {
         // store.favorito se guada dentro de favoritos 
         const newfavoritos= [...favoritos,{name:nombre, id:favoritos.length } ]
         setStore({favorito:newfavoritos})
-      }
-
+      },
+      eliminaFavorito(id){
+        const store = getStore();
+        const fav = store.favorito;
+        const favActualizado = fav.filter((item) => item.id !== id);
+        setStore({favorito: favActualizado})}
+    
       
     },
   };
